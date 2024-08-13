@@ -74,7 +74,7 @@ include "%L"
 <Multi_key> <apostrophe> <space>			: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key> <space> <apostrophe>			: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key> <Cyrillic_e> <space>			: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key> <space> <Cyrillic_e>			: "ʼ"	U02BC # MODIFIER LETTEsR APOSTROPHE
+<Multi_key> <space> <Cyrillic_e>			: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
 # Override diaeresis in en_US:
 <Multi_key> <quotedbl> <space>				: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
 <Multi_key> <space> <quotedbl>				: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
