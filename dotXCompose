@@ -31,8 +31,8 @@
 #	; or prefix ,	descender to the left (Ӌӌ - Khakassian Che, italics are displayed incorrectly in Meslo font)
 #	6				top hook (Ꚕꚕ)
 #
-# Historical Russian letters ѢѣѲѳѴѵ, as well as non-Russian letters
-# from the XX century, might have some merit, otherwise historical letters
+# Historical Russian letters Ѣ Ѳ Ѵ, as well as non-Russian letters
+# from the XX-XXI century, might have some merit, otherwise archaic letters
 # should be avoided.
 # Historical/archaic/obsolete letters are lower priority than current ones.
 #
@@ -54,8 +54,6 @@
 #
 # TODO:
 #	add Yazghulami letters: Г˚г˚, Ғ˚ғ˚, К˚к˚, Х˚х˚, Х̌˚х̌˚, ɣɤ, ɣ̌ɤ̌, Δδ, Θθ
-#	add Wakhi letters: Ҷ̈ҷ̈
-#	add: ӿ̊
 #	add all superscript & subscript modifier letters (incl. Cyrillic Extended-D block)
 #	add Abkhaz digraphs: Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
 #
@@ -71,15 +69,15 @@ include "%L"
 # ============================================================================ #
 
 # Apostrophe and double apostrophe
-<Multi_key> <apostrophe> <space>			: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key> <space> <apostrophe>			: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key> <Cyrillic_e> <space>			: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key> <space> <Cyrillic_e>			: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key> <apostrophe> <space>	: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key> <space> <apostrophe>	: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key> <Cyrillic_e> <space>	: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key> <space> <Cyrillic_e>	: "ʼ"	U02BC # MODIFIER LETTER APOSTROPHE
 # Override diaeresis in en_US:
-<Multi_key> <quotedbl> <space>				: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
-<Multi_key> <space> <quotedbl>				: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
-<Multi_key> <Cyrillic_E> <space>			: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
-<Multi_key> <space> <Cyrillic_E>			: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
+<Multi_key> <quotedbl> <space>		: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
+<Multi_key> <space> <quotedbl>		: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
+<Multi_key> <Cyrillic_E> <space>	: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
+<Multi_key> <space> <Cyrillic_E>	: "ˮ"	U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
 
 # Rotated/mirrored look-alike letters
 <Multi_key> <Cyrillic_E> <Cyrillic_E>		: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE
@@ -1139,11 +1137,6 @@ include "%L"
 
 # Letters with combining diacritics
 # Some letters are further decomposed in "multiple diacritics" section.
-
-# Historical GHE split by middle ring from Kulaev's Bashkir alphabet is absent from Unicode
-# https://www.unicode.org/L2/L2022/22154-old-cyrillic-bashkir.pdf
-<Multi_key> <Cyrillic_GHE> <Cyrillic_O>	: "Г⃘"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING RING OVERLAY
-<Multi_key> <Cyrillic_ghe> <Cyrillic_o>	: "г⃘"	# CYRILLIC SMALL LETTER GHE plus COMBINING RING OVERLAY
 
 # Letter with combining cedilla
 # https://en.wikipedia.org/wiki/Ge_with_cedilla
@@ -2510,6 +2503,32 @@ include "%L"
 # <Multi_key> <comma> <asterisk> <Cyrillic_ka>				: "қ̊"	# CYRILLIC SMALL LETTER KA WITH DESCENDER plus COMBINING RING ABOVE
 <Multi_key> <asterisk> <comma> <Cyrillic_KA>				: "Қ̊"	# CYRILLIC CAPITAL LETTER KA WITH DESCENDER plus COMBINING RING ABOVE
 <Multi_key> <asterisk> <comma> <Cyrillic_ka>				: "қ̊"	# CYRILLIC SMALL LETTER KA WITH DESCENDER plus COMBINING RING ABOVE
+# Ӿ̊ӿ̊
+<dead_abovering> <Multi_key> <Cyrillic_ZHE> <Cyrillic_ZHE>	: "Ӿ̊"	# CYRILLIC CAPITAL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<dead_abovering> <Multi_key> <Cyrillic_zhe> <Cyrillic_zhe>	: "ӿ̊"	# CYRILLIC SMALL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<dead_abovering> <dead_stroke> <Cyrillic_HA>				: "Ӿ̊"	# CYRILLIC CAPITAL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<dead_abovering> <dead_stroke> <Cyrillic_ha>				: "ӿ̊"	# CYRILLIC SMALL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<dead_abovering> <Multi_key> <minus> <Cyrillic_HA>			: "Ӿ̊"	# CYRILLIC CAPITAL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<dead_abovering> <Multi_key> <minus> <Cyrillic_ha>			: "ӿ̊"	# CYRILLIC SMALL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<Multi_key> <Cyrillic_o> <dead_stroke> <Cyrillic_HA>		: "Ӿ̊"	# CYRILLIC CAPITAL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<Multi_key> <Cyrillic_o> <dead_stroke> <Cyrillic_ha>		: "ӿ̊"	# CYRILLIC SMALL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<Multi_key> <asterisk> <dead_stroke> <Cyrillic_HA>			: "Ӿ̊"	# CYRILLIC CAPITAL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<Multi_key> <asterisk> <dead_stroke> <Cyrillic_ha>			: "ӿ̊"	# CYRILLIC SMALL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<Multi_key> <asterisk> <minus> <Cyrillic_HA>				: "Ӿ̊"	# CYRILLIC CAPITAL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+<Multi_key> <asterisk> <minus> <Cyrillic_ha>				: "ӿ̊"	# CYRILLIC SMALL LETTER HA WITH STROKE plus COMBINING RING ABOVE
+# Ҷ̈ҷ̈
+<dead_diaeresis> <dead_belowcomma> <Cyrillic_CHE>			: "Ҷ̈"	# CYRILLIC CAPITAL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<dead_diaeresis> <dead_belowcomma> <Cyrillic_che>			: "ҷ̈"	# CYRILLIC SMALL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<dead_diaeresis> <Multi_key> <comma> <Cyrillic_CHE>			: "Ҷ̈"	# CYRILLIC CAPITAL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<dead_diaeresis> <Multi_key> <comma> <Cyrillic_che>			: "ҷ̈"	# CYRILLIC SMALL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<Multi_key> <diaeresis> <dead_belowcomma> <Cyrillic_CHE>	: "Ҷ̈"	# CYRILLIC CAPITAL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<Multi_key> <diaeresis> <dead_belowcomma> <Cyrillic_che>	: "ҷ̈"	# CYRILLIC SMALL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<Multi_key> <quotedbl> <dead_belowcomma> <Cyrillic_CHE>		: "Ҷ̈"	# CYRILLIC CAPITAL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<Multi_key> <quotedbl> <dead_belowcomma> <Cyrillic_che>		: "ҷ̈"	# CYRILLIC SMALL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<Multi_key> <diaeresis> <comma> <Cyrillic_CHE>				: "Ҷ̈"	# CYRILLIC CAPITAL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<Multi_key> <diaeresis> <comma> <Cyrillic_che>				: "ҷ̈"	# CYRILLIC SMALL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<Multi_key> <quotedbl> <comma> <Cyrillic_CHE>				: "Ҷ̈"	# CYRILLIC CAPITAL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
+<Multi_key> <quotedbl> <comma> <Cyrillic_che>				: "ҷ̈"	# CYRILLIC SMALL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
 # Ҷ̣ҷ̣
 # <dead_belowcomma> <dead_belowdot> <Cyrillic_CHE>		: "Ҷ̣"	# CYRILLIC CAPITAL LETTER CHE WITH DESCENDER plus COMBINING DOT BELOW
 # <dead_belowcomma> <dead_belowdot> <Cyrillic_che>		: "ҷ̣"	# CYRILLIC SMALL LETTER CHE WITH DESCENDER plus COMBINING DOT BELOW
@@ -2526,14 +2545,14 @@ include "%L"
 # Ӷ̵ӷ̵ (https://en.wikipedia.org/wiki/Ge_with_stroke_and_descender)
 <dead_stroke> <dead_belowcomma> <Cyrillic_GHE>			: "Ӷ̵"	# CYRILLIC CAPITAL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
 <dead_stroke> <dead_belowcomma> <Cyrillic_ghe>			: "ӷ̵"	# CYRILLIC SMALL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
-<dead_belowcomma> <dead_stroke> <Cyrillic_GHE>			: "Ӷ̵"	# CYRILLIC CAPITAL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
-<dead_belowcomma> <dead_stroke> <Cyrillic_ghe>			: "ӷ̵"	# CYRILLIC SMALL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
+# <dead_belowcomma> <dead_stroke> <Cyrillic_GHE>			: "Ӷ̵"	# CYRILLIC CAPITAL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
+# <dead_belowcomma> <dead_stroke> <Cyrillic_ghe>			: "ӷ̵"	# CYRILLIC SMALL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
 <dead_stroke> <Multi_key> <comma> <Cyrillic_GHE>		: "Ӷ̵"	# CYRILLIC CAPITAL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
 <dead_stroke> <Multi_key> <comma> <Cyrillic_ghe>		: "ӷ̵"	# CYRILLIC SMALL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
-<dead_belowcomma> <Multi_key> <minus> <Cyrillic_GHE>	: "Ӷ̵"	# CYRILLIC CAPITAL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
-<dead_belowcomma> <Multi_key> <minus> <Cyrillic_ghe>	: "ӷ̵"	# CYRILLIC SMALL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
-<Multi_key> <comma> <dead_stroke> <Cyrillic_GHE>		: "Ӷ̵"	# CYRILLIC CAPITAL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
-<Multi_key> <comma> <dead_stroke> <Cyrillic_ghe>		: "ӷ̵"	# CYRILLIC SMALL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
+# <dead_belowcomma> <Multi_key> <minus> <Cyrillic_GHE>	: "Ӷ̵"	# CYRILLIC CAPITAL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
+# <dead_belowcomma> <Multi_key> <minus> <Cyrillic_ghe>	: "ӷ̵"	# CYRILLIC SMALL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
+# <Multi_key> <comma> <dead_stroke> <Cyrillic_GHE>		: "Ӷ̵"	# CYRILLIC CAPITAL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
+# <Multi_key> <comma> <dead_stroke> <Cyrillic_ghe>		: "ӷ̵"	# CYRILLIC SMALL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
 <Multi_key> <minus> <dead_belowcomma> <Cyrillic_GHE>	: "Ӷ̵"	# CYRILLIC CAPITAL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
 <Multi_key> <minus> <dead_belowcomma> <Cyrillic_ghe>	: "ӷ̵"	# CYRILLIC SMALL LETTER GHE WITH DESCENDER plus COMBINING SHORT STROKE OVERLAY
 # Ъ̀ъ̀
