@@ -55,6 +55,7 @@
 # anything in en_US yet, but still, their novelty should be mentioned.
 #
 # TODO:
+#	Serbian & Macedonian Cyrillic alphabets lack ЪЫЬ letters; invent some seqs for them
 #	reorder sequences to make "diacritics before letter" pattern the main one
 #	add remaining Yazghulami letters: ɣɤ, ɣ̌ɤ̌, Δδ, Θθ
 #	add all superscript & subscript modifier letters (incl. Cyrillic Extended-D block)
@@ -154,7 +155,8 @@ include "%L"
 <Multi_key> <Cyrillic_yeru> <Cyrillic_yeru>	: "ѕ"	Macedonia_dse # CYRILLIC SMALL LETTER DZE
 <Multi_key> <Cyrillic_A> <Cyrillic_A>		: "Ғ"	Cyrillic_GHE_bar # CYRILLIC CAPITAL LETTER GHE WITH STROKE
 <Multi_key> <Cyrillic_a> <Cyrillic_a>		: "ғ"	Cyrillic_ghe_bar # CYRILLIC SMALL LETTER GHE WITH STROKE
-# Double ER could also be repurposed to type historical Komi De
+# Double ER could also be repurposed to type historical Komi De or ЬЪЫ
+# in Serbian & Macedonian
 <Multi_key> <Cyrillic_ER> <Cyrillic_ER>		: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
 <Multi_key> <Cyrillic_er> <Cyrillic_er>		: "һ"	Cyrillic_shha # CYRILLIC SMALL LETTER SHHA
 # Double O could also be repurposed to type one of archaic O variants (binocular, multiocular...)
@@ -298,7 +300,7 @@ include "%L"
 <Multi_key> <Cyrillic_shorti> <Cyrillic_u>	: "ў"	Byelorussian_shortu # CYRILLIC SMALL LETTER SHORT U
 
 # ---------------------------------------------------------------------------- #
-# Letters absent from Macedonian & Serbian Cyrillic alphabets
+# Letters absent from Macedonian, Serbian, Tajik Cyrillic alphabets
 # ---------------------------------------------------------------------------- #
 <Multi_key> <Cyrillic_TE> <Cyrillic_ES>	: "Ц"	Cyrillic_TSE # CYRILLIC CAPITAL LETTER TSE
 <Multi_key> <Cyrillic_te> <Cyrillic_es>	: "ц"	Cyrillic_tse # CYRILLIC SMALL LETTER TSE
@@ -306,13 +308,15 @@ include "%L"
 <Multi_key> <Cyrillic_je> <Cyrillic_i>	: "й"	Cyrillic_shorti # CYRILLIC SMALL LETTER SHORT I
 <Multi_key> <Cyrillic_JE> <Cyrillic_O>	: "Ё"	Cyrillic_IO # CYRILLIC CAPITAL LETTER IO
 <Multi_key> <Cyrillic_je> <Cyrillic_o>	: "ё"	Cyrillic_io # CYRILLIC SMALL LETTER IO
+<Multi_key> <Cyrillic_JE> <Cyrillic_IE>	: "Э"	Cyrillic_E # CYRILLIC CAPITAL LETTER E
+<Multi_key> <Cyrillic_je> <Cyrillic_ie>	: "э"	Cyrillic_e # CYRILLIC SMALL LETTER E
 <Multi_key> <Cyrillic_JE> <Cyrillic_U>	: "Ю"	Cyrillic_YU # CYRILLIC CAPITAL LETTER YU
 <Multi_key> <Cyrillic_je> <Cyrillic_u>	: "ю"	Cyrillic_yu # CYRILLIC SMALL LETTER YU
 <Multi_key> <Cyrillic_JE> <Cyrillic_A>	: "Я"	Cyrillic_YA # CYRILLIC CAPITAL LETTER YA
 <Multi_key> <Cyrillic_je> <Cyrillic_a>	: "я"	Cyrillic_ya # CYRILLIC SMALL LETTER YA
 
 # ---------------------------------------------------------------------------- #
-# Macedonian & Serbian Cyrillic letter sequences based on Jj
+# Cross-availability sequences for Macedonian & Serbian Cyrillic letters
 # ---------------------------------------------------------------------------- #
 <Multi_key> <Cyrillic_DE> <Cyrillic_JE>		: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
 <Multi_key> <Cyrillic_de> <Cyrillic_je>		: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
