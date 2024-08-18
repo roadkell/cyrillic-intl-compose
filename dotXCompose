@@ -25,6 +25,7 @@
 #	.				dot above
 #	о or *			ring above
 #	!				dot below
+#	1				palochka (in multigraphs)
 # One of a kind letters:
 #	= or ˝		double acute (Ӳӳ); en_US and sr_RS have it with dead_doubleacute and =
 #	` (or ё)	upturn (Ґґ)
@@ -55,9 +56,7 @@
 #
 # TODO:
 #	reorder sequences to make "diacritics before letter" pattern the main one
-#	add remaining Yazghulami letters: Х̌˚х̌˚ (or Х̌̊х̌̊ or Х̊̌х̊̌), ɣɤ, ɣ̌ɤ̌, Δδ, Θθ
-#
-#	(order of stacked diacritics with ring: Ǻǻ Å̂å̂ Å̃å̃ Å̄å̄ Å̆å̆ Ā̊ā̊ E̊̄e̊̄ Ō̊ō̊ Ů́ů́ Ů̃ů̃ Ũ̊ũ̊ Ū̊ū̊)
+#	add remaining Yazghulami letters: ɣɤ, ɣ̌ɤ̌, Δδ, Θθ
 #	add all superscript & subscript modifier letters (incl. Cyrillic Extended-D block)
 #	add Abkhaz digraphs: Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
 #
@@ -481,7 +480,6 @@ include "%L"
 <Multi_key> <Cyrillic_yeru> <1>		: "ыӏ"
 <Multi_key> <Cyrillic_E> <1>		: "Эӏ"
 <Multi_key> <Cyrillic_e> <1>		: "эӏ"
-<Multi_key> <exclam> <Cyrillic_U>	: "Іу"
 <Multi_key> <1> <Cyrillic_U>		: "Іу"
 <Multi_key> <1> <Cyrillic_u>		: "ӏу"
 
@@ -595,7 +593,7 @@ include "%L"
 # <Multi_key> <1> <Cyrillic_GHE>			: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
 # <Multi_key> <1> <Cyrillic_ghe>			: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
 # Ꚁꚁ
-# In some fonts (Code2000) the upturn is on the right
+# In some fonts (ex. Code2000) the upturn is on the right
 <dead_grave> <Cyrillic_DE>				: "Ꚁ"	UA680 # CYRILLIC CAPITAL LETTER DWE
 <dead_grave> <Cyrillic_de>				: "ꚁ"	UA681 # CYRILLIC SMALL LETTER DWE
 <Multi_key> <grave> <Cyrillic_DE>		: "Ꚁ"	UA680 # CYRILLIC CAPITAL LETTER DWE
@@ -666,7 +664,7 @@ include "%L"
 # Letters with horizontal stroke
 # ---------------------------------------------------------------------------- #
 # Sequences for ҒғҞҟҰұ with prefix slash & KP_Divide are already defined in en_US
-# TODO: add seq's with postfix slash for ҒғҞҟҰұ
+# TODO: maybe add seq's with postfix slash for ҒғҞҟҰұ?
 # Ғғ
 <dead_stroke> <Cyrillic_GHE>		: "Ғ"	Cyrillic_GHE_bar # CYRILLIC CAPITAL LETTER GHE WITH STROKE
 <dead_stroke> <Cyrillic_ghe>		: "ғ"	Cyrillic_ghe_bar # CYRILLIC SMALL LETTER GHE WITH STROKE
@@ -2883,25 +2881,29 @@ include "%L"
 <Multi_key> <asterisk> <dead_stroke> <Cyrillic_ha>			: "ӿ̊"	# CYRILLIC SMALL LETTER HA WITH STROKE plus COMBINING RING ABOVE
 <Multi_key> <asterisk> <minus> <Cyrillic_HA>				: "Ӿ̊"	# CYRILLIC CAPITAL LETTER HA WITH STROKE plus COMBINING RING ABOVE
 <Multi_key> <asterisk> <minus> <Cyrillic_ha>				: "ӿ̊"	# CYRILLIC SMALL LETTER HA WITH STROKE plus COMBINING RING ABOVE
-# Х̊̌х̊̌
-<dead_caron> <dead_abovering> <Cyrillic_HA>					: "Х̊̌"	# CYRILLIC CAPITAL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<dead_caron> <dead_abovering> <Cyrillic_ha>					: "х̊̌"	# CYRILLIC SMALL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<dead_caron> <Multi_key> <Cyrillic_o> <Cyrillic_HA>			: "Х̊̌"	# CYRILLIC CAPITAL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<dead_caron> <Multi_key> <Cyrillic_o> <Cyrillic_ha>			: "х̊̌"	# CYRILLIC SMALL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<dead_caron> <Multi_key> <asterisk> <Cyrillic_HA>			: "Х̊̌"	# CYRILLIC CAPITAL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<dead_caron> <Multi_key> <asterisk> <Cyrillic_ha>			: "х̊̌"	# CYRILLIC SMALL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-# <Multi_key> <v> <dead_abovering> <Cyrillic_HA>			: "Х̊̌"	# CYRILLIC CAPITAL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-# <Multi_key> <v> <dead_abovering> <Cyrillic_ha>			: "х̊̌"	# CYRILLIC SMALL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<Multi_key> <Cyrillic_em> <dead_abovering> <Cyrillic_HA>	: "Х̊̌"	# CYRILLIC CAPITAL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<Multi_key> <Cyrillic_em> <dead_abovering> <Cyrillic_ha>	: "х̊̌"	# CYRILLIC SMALL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-# <Multi_key> <v> <asterisk> <Cyrillic_HA>					: "Х̊̌"	# CYRILLIC CAPITAL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-# <Multi_key> <v> <asterisk> <Cyrillic_ha>					: "х̊̌"	# CYRILLIC SMALL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-# <Multi_key> <v> <Cyrillic_o> <Cyrillic_HA>				: "Х̊̌"	# CYRILLIC CAPITAL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-# <Multi_key> <v> <Cyrillic_o> <Cyrillic_ha>				: "х̊̌"	# CYRILLIC SMALL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<Multi_key> <Cyrillic_em> <asterisk> <Cyrillic_HA>			: "Х̊̌"	# CYRILLIC CAPITAL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<Multi_key> <Cyrillic_em> <asterisk> <Cyrillic_ha>			: "х̊̌"	# CYRILLIC SMALL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<Multi_key> <Cyrillic_em> <Cyrillic_o> <Cyrillic_HA>		: "Х̊̌"	# CYRILLIC CAPITAL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
-<Multi_key> <Cyrillic_em> <Cyrillic_o> <Cyrillic_ha>		: "х̊̌"	# CYRILLIC SMALL LETTER HA plus COMBINING RING ABOVE and COMBINING CARON
+# Х̌̊х̌̊
+# The 2019 Yazghulami alphabet proposal has an ambiguous order of diacritics,
+# but given that it was based on the earlier Latin Yazghulami alphabet, where
+# ring is above háček (X̌̊x̌̊), it likely implies the same order.
+# https://ru.wikipedia.org/wiki/Язгулямский_язык
+<dead_abovering> <dead_caron> <Cyrillic_HA>					: "Х̌̊"	# CYRILLIC CAPITAL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<dead_abovering> <dead_caron> <Cyrillic_ha>					: "х̌̊"	# CYRILLIC SMALL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+# <dead_abovering> <Multi_key> <v> <Cyrillic_HA>			: "Х̌̊"	# CYRILLIC CAPITAL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+# <dead_abovering> <Multi_key> <v> <Cyrillic_ha>			: "х̌̊"	# CYRILLIC SMALL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<dead_abovering> <Multi_key> <Cyrillic_em> <Cyrillic_HA>	: "Х̌̊"	# CYRILLIC CAPITAL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<dead_abovering> <Multi_key> <Cyrillic_em> <Cyrillic_ha>	: "х̌̊"	# CYRILLIC SMALL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<Multi_key> <asterisk> <dead_caron> <Cyrillic_HA>			: "Х̌̊"	# CYRILLIC CAPITAL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<Multi_key> <asterisk> <dead_caron> <Cyrillic_ha>			: "х̌̊"	# CYRILLIC SMALL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<Multi_key> <Cyrillic_o> <dead_caron> <Cyrillic_HA>			: "Х̌̊"	# CYRILLIC CAPITAL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<Multi_key> <Cyrillic_o> <dead_caron> <Cyrillic_ha>			: "х̌̊"	# CYRILLIC SMALL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+# <Multi_key> <asterisk> <v> <Cyrillic_HA>					: "Х̌̊"	# CYRILLIC CAPITAL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+# <Multi_key> <asterisk> <v> <Cyrillic_ha>					: "х̌̊"	# CYRILLIC SMALL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+# <Multi_key> <Cyrillic_o> <v> <Cyrillic_HA>				: "Х̌̊"	# CYRILLIC CAPITAL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+# <Multi_key> <Cyrillic_o> <v> <Cyrillic_ha>				: "х̌̊"	# CYRILLIC SMALL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<Multi_key> <asterisk> <Cyrillic_em> <Cyrillic_HA>			: "Х̌̊"	# CYRILLIC CAPITAL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<Multi_key> <asterisk> <Cyrillic_em> <Cyrillic_ha>			: "х̌̊"	# CYRILLIC SMALL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<Multi_key> <Cyrillic_o> <Cyrillic_em> <Cyrillic_HA>		: "Х̌̊"	# CYRILLIC CAPITAL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
+<Multi_key> <Cyrillic_o> <Cyrillic_em> <Cyrillic_ha>		: "х̌̊"	# CYRILLIC SMALL LETTER HA plus COMBINING CARON and COMBINING RING ABOVE
 # Ҷ̈ҷ̈
 <dead_diaeresis> <dead_belowcomma> <Cyrillic_CHE>			: "Ҷ̈"	# CYRILLIC CAPITAL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
 <dead_diaeresis> <dead_belowcomma> <Cyrillic_che>			: "ҷ̈"	# CYRILLIC SMALL LETTER CHE WITH DESCENDER plus COMBINING DIAERESIS
